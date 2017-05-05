@@ -1,0 +1,53 @@
+/*--------------------------------------*\
+	Main
+\*--------------------------------------*/
+
+html {
+	overflow-y: scroll;
+	min-height: 100%;
+}
+
+h2 {
+  margin: 0 0 16px 0;
+}
+
+p {
+  margin: 8px 0;
+}
+
+a.link {
+  margin: 16px 0;
+}
+
+.bw-bg {
+  background: url('../img/bw-rec.svg') no-repeat bottom;
+  background-size: cover;
+  height: 110vh;
+
+  @include mobile-portrait {
+    background: none;
+  }
+}
+
+.white-bg-mb {
+  background: url('../img/white-rec-mb.svg') no-repeat bottom;
+  background-size: 100%;
+  width: 100%;
+  height: 60vh;
+
+  @include mobile-portrait-up {
+    background: none;
+    height: 100vh;
+  }
+}
+
+.dark-bg-mb {
+  background-color: #333333;
+  width: 100%;
+  height: 45vh;
+
+  @include mobile-portrait-up {
+    background-color: transparent;
+    height: 100vh;
+  }
+}

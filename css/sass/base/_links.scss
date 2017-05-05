@@ -1,0 +1,162 @@
+/*--------------------------------------*\
+	Links
+\*--------------------------------------*/
+
+// Menus, Links and Buttons
+
+.header {
+  @include transitions;
+  @include box-border;
+  background-color: $black;
+  width: 100%;
+  position: fixed;
+  top: -56px;
+  left: 0;
+
+  &.visible {
+    top: 0;
+  }
+
+  & .side-menu {
+    height: 56px;
+    @include m-tablet-up {
+      display: none;
+    }
+
+    & .mobile-menu {
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+
+    & .logo {
+      @include transitions;
+      width: 80px;
+      height: 40px;
+      margin: 0 auto;
+      -webkit-align-self: center;
+      align-self: center;
+    }
+  }
+
+  & .full-menu {
+    display: none;
+    @include m-tablet-up {
+      @include flex;
+    }
+  }
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  &.menu li {
+    @include box-border;
+    display: inline-block;
+    vertical-align: middle;
+    height: 56px;
+    padding: 10px 0;
+  }
+}
+
+a {
+  @include transitions;
+  @include box-border;
+  display: block;
+  text-decoration: none;
+
+  &.link {
+    color: $brand-secondary;
+
+    &:hover {
+      color: $brand-primary;
+    }
+  }
+
+  &.button {
+    display: inline-block;
+    text-align: center;
+    height: 36px;
+    padding: 6px 16px;
+    background-color: $brand-secondary;
+    border: 1px solid;
+    border-radius: $global-radius;
+    border-color: $brand-secondary;
+    color: $white;
+
+    &.flat {
+      background-color: transparent;
+      color: $brand-secondary;
+      &:hover {
+        color: $white;
+      }
+    }
+
+    &:hover{
+      background-color: $brand-primary;
+      border-color: $brand-primary;
+    }
+
+    @include mobile-portrait {
+      width: 100%;
+    }
+  }
+
+  li &.menu-button {
+    color: $brand-secondary;
+    height: 36px;
+    padding: 6px;
+    margin: 0 8px;
+    border-radius: $global-radius;
+    background-color: transparent;
+
+    &:hover {
+      color: $brand-primary;
+      background-color: $brand-light;
+    }
+  }
+
+  li &.menu-item {
+    color: $gray-12;
+    padding: 6px 0;
+    margin: 0 16px;
+    border-bottom: 2px solid;
+    border-color: $black;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:hover {
+      color: $white;
+      border-bottom: 2px solid;
+      border-color: $white;
+    }
+
+    &.active {
+      color: $brand-primary;
+      border-bottom: 2px solid;
+      border-color: $brand-primary;
+    }
+  }
+
+  li &.social-item {
+    color: $white;
+    height: 36px;
+    padding: 6px;
+    margin: 0 8px;
+    border-radius: $global-radius;
+    background-color: transparent;
+
+    &:last-child{
+      margin-right: 0;
+    }
+
+    &:hover {
+      color: $brand-primary;
+      background-color: $brand-light;
+    }
+  }
+}

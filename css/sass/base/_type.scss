@@ -1,0 +1,60 @@
+/*--------------------------------------*\
+  Type
+\*--------------------------------------*/
+
+
+
+// Headings
+
+
+h1 {
+  @include light-heavy;
+  @include l-display;
+  @include l-desktop {
+    @include xl-display;
+  }
+}
+
+h2 {
+  @include dark-heavy;
+  @include m-display;
+  @include mobile-up {
+    @include l-display;
+  }
+}
+
+h3 {
+  @include dark-heavy;
+  @include s-display;
+  @include mobile-up {
+    @include m-display;
+  }
+}
+
+h4 {
+  @extend h3;
+}
+
+h5 {
+  @include dark-heavy;
+  @include xs-display;
+}
+
+
+// Body
+
+p {
+  @include dark-regular;
+  @include s-body;
+  @include mobile-up {
+    @include body;
+  }
+}
+
+
+// Links and menu items
+
+a {
+  @include heavy;
+  @include body;
+}

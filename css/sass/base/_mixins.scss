@@ -1,0 +1,175 @@
+/*--------------------------------------*\
+  Mixins
+\*--------------------------------------*/
+
+/* Cross browser compatibility mixins */
+
+@mixin box-border {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@mixin transitions {
+  -webkit-transition: all 300ms ease;
+  -moz-transition: all 300ms ease;
+  -o-transition: all 300ms ease;
+  transition: all 300ms ease;
+}
+
+@mixin flex {
+  display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;      /* TWEENER - IE 10 */
+  display: -webkit-flex;     /* NEW - Chrome */
+  display: flex;
+}
+
+@mixin flex-column {
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+
+/* Types mixins */
+
+@mixin heavy {
+  font-family: $secondary-font;
+}
+
+@mixin regular {
+  font-family: $primary-font;
+}
+
+@mixin dark-heavy {
+  font-family: $secondary-font;
+  color: $black;
+}
+
+@mixin light-heavy {
+  font-family: $secondary-font;
+  color: $white;
+}
+
+@mixin dark-regular {
+  font-family: $primary-font;
+  color: $black;
+}
+
+@mixin light-regular {
+  font-family: $primary-font;
+  color: $white;
+}
+
+@mixin xl-display {
+  font-size: $xl-display-size;
+  line-height: $xl-display-line-height;
+}
+
+@mixin l-display {
+  font-size: $l-display-size;
+  line-height: $l-display-line-height;
+}
+
+@mixin m-display {
+  font-size: $m-display-size;
+  line-height: $m-display-line-height;
+}
+
+@mixin s-display {
+  font-size: $s-display-size;
+  line-height: $s-display-line-height;
+}
+
+@mixin xs-display {
+  font-size: $xs-display-size;
+  line-height: $xs-display-line-height;
+}
+
+@mixin s-body {
+  font-size: $s-body-size;
+  line-height: $s-body-line-height;
+}
+
+@mixin body {
+  font-size: $body-size;
+  line-height: $body-line-height;
+}
+
+
+/* Media queries mixins */
+
+@mixin mobile-portrait() {
+  @media only screen and (max-width: 500px) and (orientation: portrait) {
+    @content;
+  }
+}
+
+@mixin mobile-portrait-up() {
+  @media only screen and (min-width: 501px){
+    @content;
+  }
+}
+
+@mixin mobile-landscape() {
+  @media only screen and (max-width: 767px) and (orientation: landscape) {
+    @content;
+  }
+}
+
+@mixin mobile-up() {
+  @media only screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin s-tablet-portrait() {
+  @media only screen and (min-width: 501px) and (max-width: 767px) and (orientation: portrait) {
+    @content;
+  }
+}
+
+@mixin s-tablet-landscape() {
+  @media only screen and (min-width: 768px) and (max-width: 1023px) and (orientation: landscape) {
+    @content;
+  }
+}
+
+@mixin m-tablet-down() {
+  @media only screen and (max-width: 1023px) {
+    @content;
+  }
+}
+
+@mixin m-tablet-up() {
+  @media only screen and (min-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin m-tablet-portrait() {
+  @media only screen and (min-width: 768px) and (max-width: 1023px) and (orientation: portrait) {
+    @content;
+  }
+}
+
+@mixin m-tablet-landscape() {
+  @media only screen and (min-width: 1024px) and (max-width: 1279px) and (orientation: landscape) {
+    @content;
+  }
+}
+
+@mixin desktop() {
+  @media only screen and (min-width: 1280px){
+    @content;
+  }
+}
+
+@mixin l-desktop() {
+  @media only screen and (min-width: 1400px) {
+    @content;
+  }
+}

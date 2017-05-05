@@ -1,0 +1,62 @@
+//--------------------------------------*\
+//  Defaults
+//--------------------------------------*/
+
+// Use Sass comments for this file to prevent output to top of
+// development compiled .css
+
+
+//--------------------------------------*\
+// Colors
+//--------------------------------------*/
+
+// Brand colours
+$brand-primary:   #00E0F8;
+$brand-secondary: #00B8CC;
+$brand-light:     rgba(0,224,248,0.12);
+
+// Grays
+$gray-12:         #dddddd;
+$gray-24:         #C2C2C2;
+$gray-38:         #9E9E9E;
+$gray-54:         #707070;
+$gray-dark:       #4B4B4B;
+
+// Black & white
+$black:           #333333;
+$white:           #ffffff;
+
+
+//--------------------------------------*\
+// Base Type
+//--------------------------------------*/
+
+// Define font stacks
+$primary-font:    "Avenir LT Std 55 Roman", Helvetica, Arial, sans-serif;
+$secondary-font:  "Avenir LT Std 85 Heavy", Helvetica, Arial, sans-serif;
+
+// Base font sizes
+$s-body-size:            14px!default;
+$s-body-line-height:     20px!default;
+$body-size:              16px!default;
+$body-line-height:       24px!default;
+
+// Heading sizes
+$xl-display-size:        36px!default;
+$xl-display-line-height: 48px!default;
+$l-display-size:         32px!default;
+$l-display-line-height:  44px!default;
+$m-display-size:         24px!default;
+$m-display-line-height:  32px!default;
+$s-display-size:         18px!default;
+$s-display-line-height:  44px!default;
+$xs-display-size:        16px!default;
+$xs-display-line-height: 24px!default;
+
+
+//--------------------------------------*\
+// Project Globals
+//--------------------------------------*/
+
+// Border radius
+$global-radius:     4px;
