@@ -10,10 +10,12 @@ jQuery(document).ready(function($){
     var topScroll = $(document).scrollTop();
 
     if (topScroll > logoScroll){
-      $("div.header").addClass("visible");
+      $(".header").addClass("visible");
     } else {
-      $("div.header").removeClass("visible");
+      $(".header").removeClass("visible");
     }
   });
+
+
 
 });

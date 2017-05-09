@@ -1,46 +1,124 @@
 <!doctype html>
-<html lang="en">
+<html lang=en>
+
 <head>
-  <meta charset="utf-8">
-
-  <title>Cas UX Design - Raoni Caselli</title>
-  <meta name="keywords" content="UX Design, user experience, design, freelance, digital products, portfolio, Florianópolis, value, user centered, problem solving">
-  <meta name="description" content="Cas UX Design - Design solutions for digital products that delivers value to users, solving their problems while providing enjoyable experiences.">
-  <meta name="author" content="Cas UX Design - Raoni Caselli">
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
-  <link rel="stylesheet" href="fonts/style.css">
-  <link href="node_modules/mdi/css/materialdesignicons.min.css" media="all" rel="stylesheet" type="text/css" />
-  <link rel="stylesheet" href="css/grunt-project.css">
-  <!--[if lt IE 9]>
-  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-  <![endif]-->
+    <meta charset=utf-8>
+    <title>Cas UX Design - Raoni Caselli</title>
+    <meta name=keywords content="UX Design, user experience, design, freelance, digital products, portfolio, Florianópolis, value, user centered, problem solving">
+    <meta name=description content="Cas UX Design - Design solutions for digital products that delivers value to users, solving their problems while providing enjoyable experiences.">
+    <meta name=author content="Cas UX Design - Raoni Caselli">
+    <meta name=viewport content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel=stylesheet href=fonts/style.css>
+    <link href=node_modules/mdi/css/materialdesignicons.min.css media=all rel=stylesheet type=text/css>
+    <link rel=stylesheet href=css/grunt-project.css>
 </head>
-<body>
-  <div id="header"></div>
-  <div class="page-wrapper">
-    <div id="home"></div>
-    <div id="about" class="container">
-      <h1>Heading 1</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, obcaecati, numquam dolores ut aliquam dolorum eaque nulla quidem inventore tempore eos maiores error optio autem reiciendis enim dicta harum odit</p>
-      <h2>Heading 2</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, obcaecati, numquam dolores ut aliquam dolorum eaque nulla quidem inventore tempore eos maiores error optio autem reiciendis enim dicta harum odit?</p>
-      <h3>Heading 3</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, obcaecati, numquam dolores ut aliquam dolorum eaque nulla quidem inventore tempore eos maiores error optio autem reiciendis enim dicta harum odit?</p>
-      <h4>Heading 4</h4>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, obcaecati, numquam dolores ut aliquam dolorum eaque nulla quidem inventore tempore eos maiores error optio autem reiciendis enim dicta harum odit?</p>
-      <h5>Heading 5</h5>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, obcaecati, numquam dolores ut aliquam dolorum eaque nulla quidem inventore tempore eos maiores error optio autem reiciendis enim dicta harum odit?</p>
-      <h6>Heading 6</h6>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, obcaecati, numquam dolores ut aliquam dolorum eaque nulla quidem inventore tempore eos maiores error optio autem reiciendis enim dicta harum odit?</p>
-      <div><a class="link" href="#" alt="">Hello world</a></div>
-      <div><a class="button flat" href="#" alt="">Hello</a></div>
-      <div><a class="button" href="#" alt="">Hello</a></div>
-    </div>
-  </div>
 
-  <script src="js/vendor/jquery-1.10.2.min.js"></script>
-  <script src="js/grunt-project.min.js"></script>
+<body>
+    <header class="header">
+        <section class="side-menu row">
+            <ul class="menu mobile-menu">
+                <li>
+                    <a class="mdi mdi-menu mdi-24px menu-button" href="#" alt="Raoni Caselli on Behance"></a>
+                </li>
+            </ul>
+            <img src="img/logo.svg" alt="Cas UX Design logo" class="logo" />
+        </section>
+        <nav class="full-menu container space-between">
+            <ul class="menu">
+                <li>
+                    <a class="menu-item active first-menu-item" href="#home" alt="Home Cax UX Design">Home</a>
+                </li>
+                <li>
+                    <a class="menu-item" href="#about" alt="About Raoni Caselli">About me</a>
+                </li>
+                <li>
+                    <a class="menu-item" href="#portfolio" alt="UX Portfolio">UX Portfolio</a>
+                </li>
+                <li>
+                    <a class="menu-item" href="#" alt="Design Process">Design Process</a>
+                </li>
+                <li>
+                    <a class="menu-item" href="#" alt="Contact me">Contact</a>
+                </li>
+            </ul>
+            <ul class="menu">
+                <li>
+                    <a class="mdi mdi-behance mdi-24px social-item" href="https://behance.net/raonicaselli" alt="Raoni Caselli on Behance"></a>
+                </li>
+                <li>
+                    <a class="mdi mdi-linkedin mdi-24px social-item" href="https://www.linkedin.com/in/raoni-caselli-09a82a2b/" alt="Raoni Caselli on Linkedin"></a>
+                </li>
+                <li>
+                    <a class="mdi mdi-medium mdi-24px social-item" href="https://medium.com/@raonicaselli" alt="Raoni Caselli on Medium"></a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="row mobile-column no-wrap bw-bg">
+        <header class="column flex-center align-center dark-bg-mb">
+            <img src="./img/logo.svg" alt="Cas UX Design logo" class="logo-home" />
+            <h1 class="text-center">UX Design</h1>
+        </header>
+        <section class="column flex-center align-center white-bg-mb">
+            <article class="container home-block">
+                <h2>Designing incredible experiences, solving real problems.</h2>
+                <p>I design solutions for digital products that delivers value to users, solving their problems while providing enjoyable experiences.</p>
+                <a class="link" href="#about" alt="About me">About me</a>
+            </article>
+        </section>
+    </section>
+
+    <section id="about" class="column flex-center align-center gray-bg">
+        <div class="container">
+            <h2>About me</h2>
+            <header class="row mobile-column space-between align-center">
+                <section class="credential row align-center">
+                    <img src="./img/avatar.jpg" alt="Me smiling to the camera" class="avatar" />
+                    <article class="column">
+                        <h3>Raoni P. Caselli, 28</h3>
+                        <p>Florianópolis, SC - BR</p>
+                    </article>
+                </section>
+                <section class="row flex-end social-items">
+                    <a class="mdi mdi-behance mdi-24px button flat" href="https://behance.net/raonicaselli" alt="Raoni Caselli on Behance"></a>
+                    <a class="mdi mdi-linkedin mdi-24px button flat" href="https://www.linkedin.com/in/raoni-caselli-09a82a2b/" alt="Raoni Caselli on Linkedin"></a>
+                    <a class="mdi mdi-medium mdi-24px button flat" href="https://medium.com/@raonicaselli" alt="Raoni Caselli on Medium"></a>
+                </section>
+            </header>
+            <section class="row">
+                <article class="column align-start flex-75 mobile-flex-1">
+                    <p>I’m a UX Designer crazy about new technologies and creating friendly and easy to use interfaces. I love to go surfing early in the morning to start my day replenished and ready for the challenges that comes up. I am married to Luísa,
+                        a psychologist who is always teaching me new things about feelings and behaviours and we have a son, Dante, a curious and active baby that is showing me a different side of life.</p>
+                    <p>I want to find an amazing company that values me as a human being and can help me grow as a UX Designer. I’m looking for a mature design team where I can learn and improve my skills.</p>
+                    <a href="#" class="button flat">Download resume</a>
+                </article>
+                <article class="flex-25 family-img">
+                    <img src="img/family.jpg" alt="My family: Raoni, Luísa and Dante">
+                </article>
+            </section>
+        </div>
+    </section>
+
+    <section id="portfolio" class="column flex-center align-center white-bg">
+        <div class="container">
+            <h2>UX Portfolio</h2>
+            <section class="row mobile-column space-between align-start">
+                <a href="#" class="flex-50 mobile-flex-1">
+                    <img src="./img/portfolio/p1-cover.jpg" alt="Dolphin Surf App" class="portfolio-cover" />
+                </a>
+                <article class="flex-50 mobile-flex-1 column align-start">
+                    <h3>Dolphin Surf App</h3>
+                    <p>Platform for surfers to share wave reports between friends and also record their own surf sessions to track their performance over time.</p>
+                    <a href="#" class="button flat">Open project</a>
+                </article>
+            </section>
+        </div>
+    </section>
+
+
+    <script src="js/vendor/jquery-1.10.2.min.js"></script>
+    <script src="js/grunt-project.min.js"></script>
 </body>
+
 </html>

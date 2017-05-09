@@ -30,7 +30,7 @@ module.exports = function(grunt) {
       css: 'css',
       sass: 'css/sass',
       img: 'img',
-      fonts: 'fonts'
+      html: 'html',
     },
 
 
@@ -168,6 +168,54 @@ module.exports = function(grunt) {
     },
 
 
+    htmlbuild: {
+      dist: {
+        src: '<%= dir.html %>/index.html',
+        dest: './index.html',
+        options: {
+          beautify: true,
+          relative: true,
+          basePath: false,
+          scripts: {
+            main: '<%= dir.js %>/<%= pkg.name %>.min.js'
+          },
+          styles: {
+            main: [
+              '<%= dir.css %>/<%= pkg.name %>.css',
+            ],
+          },
+          sections: {
+            header: '<%= dir.html %>/templates/header.html',
+            home: '<%= dir.html %>/templates/home.html',
+            about: '<%= dir.html %>/templates/about.html',
+            portfolio: '<%= dir.html %>/templates/portfolio.html',
+          },
+        }
+      }
+    },
+
+
+    /**
+    * Html minify
+    *
+    */
+    minifyHtml: {
+      options: {
+        cdata: true
+      },
+      dist: {
+        files: [
+          {
+            expand: true, // Enable dynamic expansion.
+            cwd: '', // Src matches are relative to this path.
+            src: ['index.html'], // Actual pattern(s) to match.
+            dest: '', // Destination path prefix.
+          },
+        ],
+      },
+    },
+
+
     /**
      * Clean files
      * @github.com/gruntjs/grunt-contrib-clean
@@ -201,13 +249,19 @@ module.exports = function(grunt) {
         tasks: ['jshint', 'concat', 'uglify']
       },
 
+      html: {
+        files: '<%= dir.html %>',
+        tasks: ['htmlbuild']
+      },
+
       // Live reload files
       livereload: {
         options: { livereload: true },
         files: [
           '<%= dir.css %>/**/*.css',  // all .css files in css/ dir
           '<%= dir.js %>/**/*.js',    // all .js files in js/ dir
-          '**/*.{html,php}',          // all .html + .php files
+          '<%= dir.html %>/**/*.html', // all .html files in templates/ dir
+          './index.html',          // all .html + .php files
           '<%= dir.img %>/**/*.{png,jpg,jpeg,gif,svg}'  // img files in img/ dir
         ]
       }
@@ -224,6 +278,7 @@ module.exports = function(grunt) {
     'concat:js',        // Concatenate main JS files
     'uglify',           // Minifiy concatenated JS file
     'sass:dev',         // Compile Sass with dev settings
+    'htmlbuild',        // Build HTML templates into index.html
   ]);
 
 
@@ -239,6 +294,8 @@ module.exports = function(grunt) {
     'svg2png',          // Convert svg files to png
     'svgmin',           // Compress svg files
     'imagemin',         // Compress jpg/jpeg + png files
+    'htmlbuild',        // Build HTML templates into index.html
+    'minifyHtml',       // Minify HTML
   ]);
 
 
@@ -265,5 +322,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-svgmin');
   grunt.loadNpmTasks('grunt-svg2png');
-
+  grunt.loadNpmTasks('grunt-svg2png');
+  grunt.loadNpmTasks('grunt-html-build');
+  grunt.loadNpmTasks('grunt-minify-html');
 };

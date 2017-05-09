@@ -7,47 +7,219 @@ html {
 	min-height: 100%;
 }
 
-h2 {
-  margin: 0 0 16px 0;
-}
+#home {
 
-p {
-  margin: 8px 0;
-}
+  h2 {
+    margin: 0 0 24px 0;
 
-a.link {
-  margin: 16px 0;
-}
-
-.bw-bg {
-  background: url('../img/bw-rec.svg') no-repeat bottom;
-  background-size: cover;
-  height: 110vh;
-
-  @include mobile-portrait {
-    background: none;
+    @include desktop {
+      margin: 0 0 32px 0;
+    }
   }
+
+  p {
+    margin: 16px 0;
+
+    @include desktop {
+      margin: 24px 0;
+    }
+  }
+
+  a.link {
+    margin: 8px 0;
+  }
+
+  .logo-home {
+    width: 200px;
+    height: auto;
+
+    @include desktop {
+      width: 240px;
+    }
+  }
+
+  &.bw-bg {
+    background: url('../img/bw-rec.svg') no-repeat bottom;
+    background-size: cover;
+    height: 110vh;
+
+    @include mobile-portrait {
+      background: none;
+      height: 105vh;
+    }
+  }
+
+  .white-bg-mb {
+    background: url('../img/white-rec-mb.svg') no-repeat bottom;
+    background-size: 100%;
+    width: 100%;
+    height: 60vh;
+
+    @include mobile-portrait-up {
+      background: none;
+      height: 100vh;
+    }
+  }
+
+  .dark-bg-mb {
+    background-color: #333333;
+    width: 100%;
+    height: 45vh;
+
+    @include mobile-portrait-up {
+      background-color: transparent;
+      height: 100vh;
+    }
+  }
+
 }
 
-.white-bg-mb {
-  background: url('../img/white-rec-mb.svg') no-repeat bottom;
-  background-size: 100%;
-  width: 100%;
-  height: 60vh;
+#about {
 
-  @include mobile-portrait-up {
-    background: none;
-    height: 100vh;
+  h2 {
+    margin: 0 0 16px;
   }
+
+  p {
+    margin: 8px 0;
+  }
+
+  a.button {
+    margin: 16px 0;
+  }
+
+  &.gray-bg {
+    @include box-border;
+    background: url('../img/gray-rec-mb.svg') no-repeat bottom;
+    background-size: cover;
+    min-height: 110vh;
+    position: relative;
+    bottom: 5vh;
+    padding: 72px 0 48px;
+
+    @include mobile-portrait-up {
+      background-image: url('../img/gray-rec.svg');
+      bottom: 10vh;
+    }
+
+    @include mobile-up {
+      padding: 0;
+    }
+  }
+
+  .credential {
+
+    & .avatar {
+      @include box-border;
+      width: 64px;
+      height: 64px;
+      border-radius: 32px;
+      margin-right: 16px;
+    }
+
+    & h3 {
+      margin: 0;
+    }
+
+    & p {
+      margin: 4px 0 0;
+    }
+  }
+
+  .social-items {
+    margin: 24px 0 16px;
+
+    a.button {
+      padding: 6px;
+      margin: 0 16px 0 0;
+    }
+
+    @include mobile-up {
+      margin-bottom: 24px;
+    }
+    @include m-tablet-up {
+      margin-bottom: 32px;
+    }
+  }
+
+  .family-img {
+    max-width: 480px;
+    display: none;
+    margin-left: 32px;
+    padding-top: 8px;
+
+    & img {
+      width: 100%;
+      height: auto;
+      border-radius: $global-radius;
+    }
+
+    @include mobile-up {
+      display: block;
+    }
+
+  }
+
 }
 
-.dark-bg-mb {
-  background-color: #333333;
-  width: 100%;
-  height: 45vh;
+.white-bg {
+  min-height: 100vh;
+  position: relative;
+  bottom: 10vh;
+}
 
-  @include mobile-portrait-up {
-    background-color: transparent;
-    height: 100vh;
+#portfolio {
+
+  h3 {
+    margin: 32px 0 0;
+
+    @include mobile-portrait-up {
+      margin: 0;
+    }
+    @include m-tablet-up {
+      margin: 0 0 8px;
+    }
   }
+
+  a.button {
+    margin: 8px 0;
+    @include m-tablet-up {
+      margin: 16px 0;
+    }
+  }
+
+  & a.flex-50 {
+    border: 1px solid #dddddd;
+    border-radius: $global-radius;
+    margin-right: 0;
+
+    img {
+      width: 100%;
+      height: auto;
+      max-height: 224px;
+      object-fit: cover;
+      border-radius: $global-radius;
+
+      @include mobile-landscape {
+        max-height: 160px;
+      }
+
+      @include mobile-up {
+        max-height: 300px;
+      }
+
+      @include desktop {
+        max-height: 360px;
+      }
+    }
+
+    @include mobile-portrait-up {
+      margin-right: 24px;
+    }
+
+    @include m-tablet-up {
+      margin-right: 32px;
+    }
+  }
+
 }

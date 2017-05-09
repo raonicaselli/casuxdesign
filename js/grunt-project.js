@@ -16,58 +16,32 @@ jQuery(document).ready(function($){
     var topScroll = $(document).scrollTop();
 
     if (topScroll > logoScroll){
-      $("div.header").addClass("visible");
+      $(".header").addClass("visible");
     } else {
-      $("div.header").removeClass("visible");
+      $(".header").removeClass("visible");
     }
   });
+
+
 
 });
 
 jQuery(document).ready(function($){
 
-  // Select all links with hashes
-  $('a[href*="#"]')
-  // Remove links that don't actually link to anything
-  .not('[href="#"]')
-  .not('[href="#0"]')
-  .click(function(event) {
-    // On-page links
-    if (
-      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname
-    ) {
-      // Figure out element to scroll to
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-      // Does a scroll target exist?
-      if (target.length) {
-        // Only prevent default if animation is actually gonna happen
-        event.preventDefault();
-        $('html, body').animate({
-          scrollTop: target.offset().top
-        }, 1000, function() {
-          // Callback after animation
-          // Must change focus!
-          var $target = $(target);
-          $target.focus();
-          if ($target.is(':focus')) { // Checking if the target was focused
+  $("a[href^='#']").click(function(event) {
+    event.preventDefault();
+    console.log("oi");
+    if (location.pathname.replace(/^\//,"") === this.pathname.replace(/^\//,"")) {
+
+        var target = $(this.hash);
+        target = target.length ? target : $("[name=" + this.hash.slice(1) +"]");
+           if (target.length) {
+             $("html,body").animate({
+                 scrollTop: target.offset().top
+            }, 400);
             return false;
-          } else {
-            $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
-            $target.focus(); // Set focus again
-          }
-        });
-      }
+        }
     }
   });
-
-});
-
-// HTML Templates load with jQuery
-
-jQuery(document).ready(function($){
-
-  $("#header").load("./templates/header.html");
-  $("#home").load("./templates/home.html");
 
 });
