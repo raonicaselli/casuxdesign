@@ -897,11 +897,15 @@ a {
   -moz-transition: all 300ms ease;
   -o-transition: all 300ms ease;
   transition: all 300ms ease;
-  width: 80px;
-  height: 40px;
   margin: 0 auto;
   -webkit-align-self: center;
   align-self: center;
+  width: 80px;
+  height: 40px;
+}
+.header .side-menu .logo img {
+  width: 100%;
+  height: auto;
 }
 .header .full-menu {
   display: none;

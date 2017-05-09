@@ -32,11 +32,16 @@
 
     & .logo {
       @include transitions;
-      width: 80px;
-      height: 40px;
       margin: 0 auto;
       -webkit-align-self: center;
       align-self: center;
+      width: 80px;
+      height: 40px;
+
+      & img {
+        width: 100%;
+        height: auto;
+      }
     }
   }
 
