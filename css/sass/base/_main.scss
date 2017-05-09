@@ -50,7 +50,7 @@ html {
   }
 
   .white-bg-mb {
-    background: url('../img/white-rec-mb.svg') no-repeat bottom;
+    background: url('../img/light-rec.svg') no-repeat bottom;
     background-size: cover;
     width: 100%;
     height: 60vh;
@@ -79,29 +79,37 @@ html {
   @include box-border;
   background: url('../img/gray-rec-mb.svg') no-repeat top;
   background-size: cover;
+
+  @include mobile-portrait-up {
+    background: url('../img/gray-rec.svg') no-repeat top;
+    background-size: cover;
+  }
+}
+
+.white-bg {
+  @include box-border;
+  background: url('../img/white-rec-mb.svg') no-repeat top;
+  background-size: cover;
+
+  @include mobile-portrait-up {
+    background: url('../img/white-rec.svg') no-repeat top;
+    background-size: cover;
+  }
+}
+
+#about {
   min-height: 110vh;
   position: relative;
   bottom: 5vh;
   padding: 72px 0 48px;
 
   @include mobile-portrait-up {
-    background: url('../img/gray-rec.svg') no-repeat top;
-    background-size: cover;
     bottom: 10vh;
   }
 
   @include mobile-up {
     padding: 0;
   }
-}
-
-.white-bg {
-  min-height: 100vh;
-  position: relative;
-  bottom: 10vh;
-}
-
-#about {
 
   h2 {
     margin: 0 0 16px;
@@ -171,6 +179,18 @@ html {
 }
 
 #portfolio {
+  min-height: 110vh;
+  position: relative;
+  bottom: 10vh;
+  padding: 72px 0 48px;
+
+  @include mobile-portrait-up {
+    bottom: 20vh;
+  }
+
+  @include mobile-up {
+    padding: 0;
+  }
 
   h3 {
     margin: 32px 0 0;

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 1280 864" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <g>
+    <g fill="#FFFFFF">
+      <polygon points="0 0 1280 48 1280 816 0 864"></polygon>
+      <!-- <line x1="0" y1="816" x2="1280" y2="864" style="stroke:#dddddd;stroke-width:1" /> -->
+      <line x1="0" y1="0" x2="1280" y2="48" style="stroke:#dddddd;stroke-width:1" />
+    </g>
+  </g>
+</svg>
