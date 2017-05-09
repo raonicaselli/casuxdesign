@@ -9,7 +9,7 @@
     <g fill="#ffffff">
       <g>
         <polygon points="0 0 360 0 360 320 0 344"></polygon>
-        <line x1="0" y1="344" x2="360" y2="320" style="stroke:#dddddd;stroke-width:1" />
+        <!-- <line x1="0" y1="344" x2="360" y2="320" style="stroke:#dddddd;stroke-width:1" /> -->
       </g>
     </g>
   </g>
