@@ -57,6 +57,7 @@ html {
 
     @include mobile-portrait-up {
       background: none;
+      background-color: transparent;
       height: 100vh;
     }
   }
@@ -98,7 +99,8 @@ html {
     padding: 72px 0 48px;
 
     @include mobile-portrait-up {
-      background-image: url('../img/gray-rec.svg');
+      background: url('../img/gray-rec.svg') no-repeat bottom;
+      background-size: cover;
       bottom: 10vh;
     }
 
