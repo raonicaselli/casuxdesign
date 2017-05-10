@@ -29,10 +29,10 @@
                     <a class="mobile-menu-item" href="#portfolio" alt="UX Portfolio">UX Portfolio</a>
                 </li>
                 <li>
-                    <a class="mobile-menu-item" href="#" alt="Design Process">Design Process</a>
+                    <a class="mobile-menu-item" href="#process" alt="Design Process">Design Process</a>
                 </li>
                 <li>
-                    <a class="mobile-menu-item" href="#" alt="Contact me">Contact</a>
+                    <a class="mobile-menu-item" href="#contact" alt="Contact me">Contact</a>
                 </li>
             </ul>
             <ul class="row flex-center align-center">
@@ -139,7 +139,7 @@
         </section>
 
         <section id="portfolio" class="column flex-center align-center white-bg">
-            <div class="container">
+            <div class="container slider-container">
                 <h2>UX Portfolio</h2>
                 <div class="portfolio-slider" data-slideout-ignore>
                     <ul>
@@ -173,6 +173,72 @@
                     </ul>
                 </div>
             </div>
+        </section>
+
+        <section id="process" class="column flex-center align-center gray-bg">
+            <div class="container slider-container">
+                <h2>UX Portfolio</h2>
+                <div class="process-slider" data-slideout-ignore>
+                    <ul>
+
+                        <li>
+                            <section class="row mobile-column space-between align-start">
+                                <a href="#" class="flex-50 mobile-flex-1">
+                                    <img src="./img/portfolio/p1-cover.jpg" alt="Dolphin Surf App" class="portfolio-cover" />
+                                </a>
+                                <article class="flex-50 mobile-flex-1 column align-start">
+                                    <h3>Dolphin Surf App</h3>
+                                    <p>Platform for surfers to share wave reports between friends and also record their own surf sessions to track their performance over time.</p>
+                                    <a href="#" class="button flat">Open project</a>
+                                </article>
+                            </section>
+                        </li>
+
+                        <li>
+                            <section class="row mobile-column space-between align-start">
+                                <a href="#" class="flex-50 mobile-flex-1">
+                                    <img src="./img/portfolio/p1-cover.jpg" alt="Dolphin Surf App" class="portfolio-cover" />
+                                </a>
+                                <article class="flex-50 mobile-flex-1 column align-start">
+                                    <h3>Healfies</h3>
+                                    <p>Platform for surfers to share wave reports between friends and also record their own surf sessions to track their performance over time.</p>
+                                    <a href="#" class="button flat">Open project</a>
+                                </article>
+                            </section>
+                        </li>
+
+                        <li>
+                            <section class="row mobile-column space-between align-start">
+                                <a href="#" class="flex-50 mobile-flex-1">
+                                    <img src="./img/portfolio/p1-cover.jpg" alt="Dolphin Surf App" class="portfolio-cover" />
+                                </a>
+                                <article class="flex-50 mobile-flex-1 column align-start">
+                                    <h3>Spinver</h3>
+                                    <p>Platform for surfers to share wave reports between friends and also record their own surf sessions to track their performance over time.</p>
+                                    <a href="#" class="button flat">Open project</a>
+                                </article>
+                            </section>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="column flex-center align-center white-bg">
+            <article class="container contact-container">
+                <h2>Leave me a message :)</h2>
+                <p>Want to hire me as a UX Designer for your company or alocated in a specific project? Leave me a message below so we can drink a beer and have a good talk about it.</p>
+                <form id="contact-form" class="column align-start">
+                    <label for="cname"><p>Name</p></label>
+                    <input required name="name" id="cname" type="text" placeholder="Your first name is fine" />
+                    <label for="cemail"><p>Email</p></label>
+                    <input required name="email" id="cemail" type="email" placeholder="Personal or company email" />
+                    <label for="cmessage"><p>Message</p></label>
+                    <textarea required name="message" id="cmessage" rows="3" placeholder="What do you want to ask me?"></textarea>
+                    <a class="button">Send message</a>
+                </form>
+            </article>
         </section>
 
     </main>

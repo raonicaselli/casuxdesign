@@ -190,6 +190,8 @@ module.exports = function(grunt) {
             home: '<%= dir.html %>/templates/home.html',
             about: '<%= dir.html %>/templates/about.html',
             portfolio: '<%= dir.html %>/templates/portfolio.html',
+            process: '<%= dir.html %>/templates/process.html',
+            contact: '<%= dir.html %>/templates/contact.html',
           },
         }
       }

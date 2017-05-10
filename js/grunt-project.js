@@ -22,8 +22,21 @@ jQuery(document).ready(function($){
   });
 
   // Add slider functions
-  $(".portfolio-slider").unslider();
+  $(".portfolio-slider").unslider({
+    speed: 300,
+    arrows: {
+      prev: "<a class='slider-arrow prev mdi mdi-chevron-left' alt='Previous slide'></a>",
+      next: "<a class='slider-arrow next mdi mdi-chevron-right' alt='Next slide'></a>",
+    }
+  });
 
+  $(".process-slider").unslider({
+    speed: 300,
+    arrows: {
+      prev: "<a class='slider-arrow prev mdi mdi-chevron-left' alt='Previous slide'></a>",
+      next: "<a class='slider-arrow next mdi mdi-chevron-right' alt='Next slide'></a>",
+    }
+  });
 
 
 });
@@ -32,16 +45,15 @@ jQuery(document).ready(function($){
 
   $("a[href^='#']").click(function(event) {
     event.preventDefault();
-    console.log("oi");
     if (location.pathname.replace(/^\//,"") === this.pathname.replace(/^\//,"")) {
 
         var target = $(this.hash);
         target = target.length ? target : $("[name=" + this.hash.slice(1) +"]");
-           if (target.length) {
-             $("html,body").animate({
-                 scrollTop: target.offset().top
-            }, 400);
-            return false;
+        if (target.length) {
+          $("html,body").animate({
+            scrollTop: target.offset().top
+          }, 400);
+          return false;
         }
     }
   });

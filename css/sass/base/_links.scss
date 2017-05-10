@@ -8,7 +8,7 @@
   position: fixed;
   top: 0;
   bottom: 0;
-  width: 320px;
+  width: 280px;
   min-height: 100vh;
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
@@ -25,7 +25,7 @@
   position: relative;
   z-index: 1;
   will-change: transform;
-  background-color: #333333; /* A background-color is required */
+  background-color: #ffffff; /* A background-color is required */
   min-height: 100vh;
 }
 
@@ -159,6 +159,7 @@ a {
   @include box-border;
   display: block;
   text-decoration: none;
+  cursor: pointer;
 
   &.link {
     color: $brand-secondary;
