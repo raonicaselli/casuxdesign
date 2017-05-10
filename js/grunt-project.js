@@ -9,7 +9,6 @@ License: MIT
 jQuery(document).ready(function($){
 
   // Add class to header to animate it coming down
-
   var logoScroll = $(window).height() / 1.2;
 
   $(window).scroll(function(){
@@ -21,6 +20,9 @@ jQuery(document).ready(function($){
       $(".header").removeClass("visible");
     }
   });
+
+  // Add slider functions
+  $(".portfolio-slider").unslider();
 
 
 

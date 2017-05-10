@@ -4,6 +4,93 @@
 
 // Menus, Links and Buttons
 
+.slideout-menu {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 320px;
+  min-height: 100vh;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  z-index: 0;
+  display: none;
+  background-color: #444444;
+}
+
+.slideout-menu-left {
+  left: 0;
+}
+
+.slideout-panel {
+  position: relative;
+  z-index: 1;
+  will-change: transform;
+  background-color: #333333; /* A background-color is required */
+  min-height: 100vh;
+}
+
+.slideout-open,
+.slideout-open body,
+.slideout-open .slideout-panel {
+  overflow: hidden;
+}
+
+.slideout-open .slideout-menu {
+  display: block;
+}
+
+.panel:before {
+  content: '';
+  display: block;
+  background-color: rgba(0,0,0,0);
+  transition: background-color 0.5s ease-in-out;
+}
+
+.panel-open:before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(0,0,0,.5);
+  z-index: 99;
+}
+
+#menu {
+  .close-button {
+    padding: 12px;
+    color: $white;
+    height: 56px;
+    text-align: center;
+    background-color: rgba(255,255,255,0.12);
+
+    &:before {
+      margin-right: 8px;
+      position: relative;
+      top: 3px;
+    }
+  }
+
+  ul {
+    margin: 24px 0;
+
+    a.mobile-menu-item {
+      height: 56px;
+      padding: 16px;
+      text-align: center;
+      color: $gray-12;
+
+      &:hover {
+        color: $white;
+      }
+
+      &.active {
+        color: $brand-primary;
+      }
+    }
+  }
+
+}
+
 .header {
   @include transitions;
   @include box-border;
@@ -118,6 +205,7 @@ a {
     margin: 0 8px;
     border-radius: $global-radius;
     background-color: transparent;
+    cursor: pointer;
 
     &:hover {
       color: $brand-primary;
@@ -157,7 +245,7 @@ a {
     border-radius: $global-radius;
     background-color: transparent;
 
-    &:last-child{
+    &.last-menu-item {
       margin-right: 0;
     }
 

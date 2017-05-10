@@ -861,6 +861,86 @@ a {
 /*--------------------------------------*\
 	Links
 \*--------------------------------------*/
+.slideout-menu {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 320px;
+  min-height: 100vh;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  z-index: 0;
+  display: none;
+  background-color: #444444;
+}
+
+.slideout-menu-left {
+  left: 0;
+}
+
+.slideout-panel {
+  position: relative;
+  z-index: 1;
+  will-change: transform;
+  background-color: #333333;
+  /* A background-color is required */
+  min-height: 100vh;
+}
+
+.slideout-open,
+.slideout-open body,
+.slideout-open .slideout-panel {
+  overflow: hidden;
+}
+
+.slideout-open .slideout-menu {
+  display: block;
+}
+
+.panel:before {
+  content: '';
+  display: block;
+  background-color: transparent;
+  transition: background-color 0.5s ease-in-out;
+}
+
+.panel-open:before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 99;
+}
+
+#menu .close-button {
+  padding: 12px;
+  color: #ffffff;
+  height: 56px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.12);
+}
+#menu .close-button:before {
+  margin-right: 8px;
+  position: relative;
+  top: 3px;
+}
+#menu ul {
+  margin: 24px 0;
+}
+#menu ul a.mobile-menu-item {
+  height: 56px;
+  padding: 16px;
+  text-align: center;
+  color: #dddddd;
+}
+#menu ul a.mobile-menu-item:hover {
+  color: #ffffff;
+}
+#menu ul a.mobile-menu-item.active {
+  color: #00E0F8;
+}
+
 .header {
   -webkit-transition: all 300ms ease;
   -moz-transition: all 300ms ease;
@@ -991,6 +1071,7 @@ li a.menu-button {
   margin: 0 8px;
   border-radius: 4px;
   background-color: transparent;
+  cursor: pointer;
 }
 li a.menu-button:hover {
   color: #00E0F8;
@@ -1024,7 +1105,7 @@ li a.social-item {
   border-radius: 4px;
   background-color: transparent;
 }
-li a.social-item:last-child {
+li a.social-item.last-menu-item {
   margin-right: 0;
 }
 li a.social-item:hover {

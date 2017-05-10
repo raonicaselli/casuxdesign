@@ -185,6 +185,7 @@ module.exports = function(grunt) {
             ],
           },
           sections: {
+            sidemenu: '<%= dir.html %>/templates/sidemenu.html',
             header: '<%= dir.html %>/templates/header.html',
             home: '<%= dir.html %>/templates/home.html',
             about: '<%= dir.html %>/templates/about.html',
