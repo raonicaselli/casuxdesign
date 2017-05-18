@@ -1,0 +1,63 @@
+<section class="row mobile-column section-wrapper">
+  <article class="flex-50 mobile-flex-1 project-images">
+    <div class="dolphin-slider" data-slideout-ignore>
+      <ul>
+
+        <li>
+          <img src="./img/portfolio/p1-cover.jpg" alt="Dolphin Surf App" class="portfolio-cover" />
+        </li>
+
+        <li>
+          <img src="./img/portfolio/p1-cover.jpg" alt="Dolphin Surf App" class="portfolio-cover" />
+        </li>
+
+      </ul>
+    </div>
+  </article>
+  <article class="flex-50 mobile-flex-1 project-content">
+    <div class="container">
+      <h2>Dolphin Surf App</h2>
+      <p>Check out this work on</p>
+      <section class="row social-items">
+        <a class="mdi mdi-web mdi-24px button flat" href="https://www.linkedin.com/in/raoni-caselli-09a82a2b/" alt="Raoni Caselli on Linkedin" target="_blank"></a>
+        <span>&</span>
+        <a class="mdi mdi-behance mdi-24px button flat" href="https://behance.net/raonicaselli" alt="Raoni Caselli on Behance" target="_blank"></a>
+        <a class="mdi mdi-medium mdi-24px button flat" href="https://medium.com/@raonicaselli" alt="Raoni Caselli on Medium" target="_blank"></a>
+      </section>
+      <h3>Project Scope</h3>
+      <p>Platform for surfers to share wave reports between friends and also record their own surf sessions to track their performance over time. This is a personal project I created together with Gilson Souza, a friend who is a full stack developer. It was discontinued after some time but helped me to learn a lot about designing products for sports.</p>
+      <h3>Context and Problem</h3>
+      <p>Platform for surfers to share wave reports between friends and also record their own surf sessions to track their performance over time. This is a personal project I created together with Gilson Souza, a friend who is a full stack developer. It was discontinued after some time but helped me to learn a lot about designing products for sports.</p>
+      <h3>Design Solutions</h3>
+      <p>Platform for surfers to share wave reports between friends and also record their own surf sessions to track their performance over time. This is a personal project I created together with Gilson Souza, a friend who is a full stack developer. It was discontinued after some time but helped me to learn a lot about designing products for sports.</p>
+      <h3>MVP and Experiments</h3>
+      <p>Platform for surfers to share wave reports between friends and also record their own surf sessions to track their performance over time. This is a personal project I created together with Gilson Souza, a friend who is a full stack developer. It was discontinued after some time but helped me to learn a lot about designing products for sports.</p>
+      <h3>Roadmap and Tools</h3>
+      <p>Research, interviews, benchmarking, requirements, task analysis, storyboard, wireframes, lo fi prototype, usability test, card sorting, visual design, hi fi prototype, usability test, design guidelines</p>
+    </div>
+  </article>
+  <article class="back-row container">
+    <a class="mdi mdi-arrow-left mdi-24px close-button"><span>Back</span></a>
+  </article>
+</section>
+
+<script>
+  jQuery(document).ready(function($){
+    $(".dolphin-slider").unslider({
+      speed: 300,
+      arrows: {
+        prev: "<a class='slider-arrow prev mdi mdi-chevron-left' alt='Previous slide'></a>",
+        next: "<a class='slider-arrow next mdi mdi-chevron-right' alt='Next slide'></a>",
+      }
+    });
+
+    $(".close-button").click(function(e){
+      e.preventDefault();
+      $(".section-wrapper").removeClass("visible").addClass("invisible");
+      $("html").removeClass("noscroll");
+      setTimeout(function(){
+        $("#project-page").html("");
+      }, 300);
+    });
+  });
+</script>

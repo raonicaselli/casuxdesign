@@ -4,7 +4,7 @@
     <g fill="#FFFFFF">
       <polygon points="0 0 360 24 360 664 0 688"></polygon>
       <!-- <line x1="0" y1="664" x2="360" y2="688" style="stroke:#dddddd;stroke-width:1" /> -->
-      <line x1="0" y1="0" x2="360" y2="24" style="stroke:#dddddd;stroke-width:1" />
+      <line x1="0" y1="0" x2="360" y2="24" style="stroke:#00E0F8;stroke-width:1" />
     </g>
   </g>
 </svg>

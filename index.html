@@ -16,6 +16,7 @@
 </head>
 
 <body>
+    <div id="project-page"></div>
     <nav id="menu">
         <section class="column">
             <ul class="column">
@@ -127,7 +128,7 @@
                 <section class="row">
                     <article class="column align-start flex-75 mobile-flex-1">
                         <p>I’m a UX Designer crazy about new technologies and creating friendly and easy to use interfaces. I love to go surfing early in the morning to start my day replenished and ready for the challenges that comes up. I am married to
-                            Luísa, a psychologist who is always teaching me new things about feelings and behaviours and we have a son, Dante, a curious and active baby that is showing me a different side of life.</p>
+                            Luísa, a psychologist who is always teaching me new things about feelings and behaviours and we have a son, Dante, my happy baby that is showing me a different side of life.</p>
                         <p>I want to find an amazing company that values me as a human being and can help me grow as a UX Designer. I’m looking for a mature design team where I can learn and improve my skills.</p>
                         <a href="#" class="button flat">Download resume</a>
                     </article>
@@ -152,7 +153,7 @@
                                 <article class="flex-50 mobile-flex-1 column align-start">
                                     <h3>Dolphin Surf App</h3>
                                     <p>Platform for surfers to share wave reports between friends and also record their own surf sessions to track their performance over time.</p>
-                                    <a href="#" class="button flat">Open project</a>
+                                    <a id="open-dolphin" class="button flat">Open project</a>
                                 </article>
                             </section>
                         </li>
@@ -177,7 +178,7 @@
 
         <section id="process" class="column flex-center align-center gray-bg">
             <div class="container slider-container">
-                <h2>UX Portfolio</h2>
+                <h2>Design Process</h2>
                 <div class="process-slider" data-slideout-ignore>
                     <ul>
 
@@ -231,17 +232,18 @@
                 <p>Want to hire me as a UX Designer for your company or alocated in a specific project? Leave me a message below so we can drink a beer and have a good talk about it.</p>
                 <form id="contact-form" class="column align-start">
                     <label for="cname"><p>Name</p></label>
-                    <input required name="name" id="cname" type="text" placeholder="Your first name is fine" />
+                    <input class="input" required name="name" id="cname" type="text" placeholder="Your first name is fine" />
                     <label for="cemail"><p>Email</p></label>
-                    <input required name="email" id="cemail" type="email" placeholder="Personal or company email" />
+                    <input class="input" required name="email" id="cemail" type="email" placeholder="Personal or company email" />
                     <label for="cmessage"><p>Message</p></label>
-                    <textarea required name="message" id="cmessage" rows="3" placeholder="What do you want to ask me?"></textarea>
+                    <textarea class="input" required name="message" id="cmessage" rows="3" placeholder="What do you want to ask me?"></textarea>
                     <a class="button flat">Send message</a>
                 </form>
             </article>
         </section>
 
     </main>
+
 
     <script src="js/vendor/jquery.min.js"></script>
     <script src="js/vendor/slideout.min.js"></script>

@@ -190,8 +190,8 @@ a {
     }
 
     &:hover{
-      background-color: $brand-primary;
-      border-color: $brand-primary;
+      background-color: $brand-secondary;
+      border-color: $brand-secondary;
     }
 
     @include mobile-portrait {

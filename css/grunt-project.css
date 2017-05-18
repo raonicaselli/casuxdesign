@@ -76,7 +76,7 @@ body {
  * Address `outline` inconsistency between Chrome and other browsers.
  */
 a:focus {
-  outline: thin dotted;
+  outline: 0;
 }
 
 /**
@@ -392,6 +392,10 @@ html {
   min-height: 100%;
 }
 
+html.noscroll {
+  overflow: hidden;
+}
+
 main {
   height: 520vh;
 }
@@ -648,7 +652,7 @@ main {
   margin: 24px 0 16px;
 }
 #about .social-items a.button {
-  padding: 6px;
+  padding: 5px;
   margin: 0 16px 0 0;
 }
 @media only screen and (min-width: 768px) {
@@ -753,7 +757,16 @@ main {
     margin: 32px 0 0;
   }
 }
+#contact #contact-form label p {
+  color: #707070;
+}
+#contact #contact-form label.active p {
+  color: #00B8CC;
+}
 #contact #contact-form input, #contact #contact-form textarea {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
   height: 36px;
   border: 1px solid #dddddd;
   border-radius: 4px;
@@ -762,6 +775,10 @@ main {
   font-size: 16px;
   line-height: 24px;
   margin-bottom: 24px;
+}
+#contact #contact-form input:focus, #contact #contact-form textarea:focus {
+  outline: none !important;
+  border: 2px solid #00B8CC;
 }
 #contact #contact-form textarea {
   height: 72px;
@@ -782,6 +799,149 @@ main {
 #contact #contact-form :-moz-placeholder {
   /* Firefox 18- */
   color: #9E9E9E;
+}
+
+#project-page .section-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #ffffff;
+  z-index: 9999;
+}
+@media only screen and (max-width: 500px) and (orientation: portrait) {
+  #project-page .section-wrapper {
+    height: inherit;
+  }
+}
+#project-page .section-wrapper.visible {
+  animation: blend 400ms 1;
+}
+@keyframes blend {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+#project-page .section-wrapper.invisible {
+  animation: blackout 400ms 1;
+}
+@keyframes blackout {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+#project-page .section-wrapper .unslider {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  position: relative;
+  height: 100vh;
+  padding: 32px;
+}
+@media only screen and (max-width: 500px) and (orientation: portrait) {
+  #project-page .section-wrapper .unslider {
+    height: 350px;
+    padding: 0;
+    margin-top: 56px;
+  }
+  #project-page .section-wrapper .unslider .unslider-horizontal {
+    border-bottom: 1px solid #dddddd;
+    border-top: 1px solid #dddddd;
+  }
+}
+#project-page .section-wrapper .unslider .slider-arrow {
+  top: calc(50% - 64px);
+}
+@media only screen and (max-width: 500px) and (orientation: portrait) {
+  #project-page .section-wrapper .unslider .slider-arrow {
+    display: none;
+  }
+}
+#project-page .section-wrapper .unslider .slider-arrow.next {
+  right: 0 !important;
+}
+#project-page .section-wrapper .unslider .slider-arrow.prev {
+  left: 0 !important;
+}
+#project-page .section-wrapper .unslider img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+#project-page .section-wrapper .project-images {
+  background-color: #f5f5f5;
+}
+@media only screen and (max-width: 500px) and (orientation: portrait) {
+  #project-page .section-wrapper .project-images {
+    background-color: #ffffff;
+  }
+}
+#project-page .section-wrapper .project-content {
+  overflow: scroll;
+  margin-top: 56px;
+  padding-top: 48px;
+}
+@media only screen and (max-width: 500px) and (orientation: portrait) {
+  #project-page .section-wrapper .project-content {
+    margin-top: 32px;
+    padding-top: 0;
+  }
+}
+#project-page .section-wrapper .project-content h2 {
+  margin: 0 0 8px;
+}
+#project-page .section-wrapper .project-content h3, #project-page .section-wrapper .project-content h4 {
+  margin: 32px 0 16px;
+}
+#project-page .section-wrapper .project-content p {
+  margin-top: 16px 0;
+}
+#project-page .section-wrapper .project-content .social-items a {
+  padding: 5px;
+  margin: 0 16px 0 0;
+  width: 38px;
+}
+#project-page .section-wrapper .project-content .social-items span {
+  font-size: 14px;
+  line-height: 20px;
+  font-family: "Avenir LT Std 55 Roman", Helvetica, Arial, sans-serif;
+  padding: 8px 16px 8px 0;
+  color: #707070;
+}
+#project-page .back-row {
+  position: fixed;
+  left: 50%;
+  width: 50%;
+  background-color: #ffffff;
+}
+@media only screen and (max-width: 500px) and (orientation: portrait) {
+  #project-page .back-row {
+    left: 0;
+    width: 100%;
+    background-color: #f5f5f5;
+  }
+}
+#project-page .back-row .close-button {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  height: 56px;
+  padding: 16px 0;
+  color: #707070;
+}
+#project-page .back-row .close-button:before {
+  margin-right: 8px;
+}
+#project-page .back-row .close-button span {
+  position: relative;
+  bottom: 3px;
 }
 
 /*--------------------------------------*\
@@ -812,7 +972,7 @@ main {
   }
 }
 
-.column {
+.column, #project-page .section-wrapper .unslider {
   display: -webkit-box;
   /* OLD - iOS 6-, Safari 3.1-6 */
   display: -moz-box;
@@ -902,7 +1062,7 @@ main {
   justify-content: flex-end;
 }
 
-.flex-center {
+.flex-center, #project-page .section-wrapper .unslider {
   -webkit-justify-content: center;
   justify-content: center;
 }
@@ -917,7 +1077,7 @@ main {
   align-items: flex-end;
 }
 
-.align-center {
+.align-center, #project-page .section-wrapper .unslider {
   -webkit-align-items: center;
   align-items: center;
 }
@@ -1219,8 +1379,8 @@ a.button.flat:hover {
   color: #ffffff;
 }
 a.button:hover {
-  background-color: #00E0F8;
-  border-color: #00E0F8;
+  background-color: #00B8CC;
+  border-color: #00B8CC;
 }
 @media only screen and (max-width: 500px) and (orientation: portrait) {
   a.button {
