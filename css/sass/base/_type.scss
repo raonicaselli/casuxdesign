@@ -58,3 +58,8 @@ a {
   @include heavy;
   @include body;
 }
+
+button {
+  @include regular;
+  @include body;
+}

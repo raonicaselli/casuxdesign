@@ -81,7 +81,7 @@ main {
   margin-top: 16px;
 
   @include mobile-up {
-    margin-top: 48px;
+    margin-top: 32px;
   }
 }
 
@@ -103,7 +103,7 @@ main {
     }
   }
 
-  a.button {
+  .button, .link {
     margin: 8px 0;
     @include m-tablet-up {
       margin: 16px 0;
@@ -141,6 +141,44 @@ main {
 
     @include m-tablet-up {
       margin-right: 32px;
+    }
+  }
+
+  a.img-wrapper {
+    border: 1px solid #dddddd;
+    border-radius: $global-radius;
+    margin-bottom: 0;
+    width: 100%;
+    min-height: 30vh;
+    text-align: center;
+
+    img {
+      width: auto;
+      height: auto;
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      border-radius: $global-radius;
+
+      //@include mobile-landscape {
+      //  max-height: 120px;
+      //}
+      //
+      //@include mobile-up {
+      //  max-height: 240px;
+      //}
+
+      @include desktop {
+        max-height: 35vh;
+      }
+    }
+
+    @include mobile-portrait-up {
+      margin-bottom: 24px;
+    }
+
+    @include m-tablet-up {
+      margin-bottom: 32px;
     }
   }
 
@@ -237,7 +275,7 @@ main {
     margin: 8px 0;
   }
 
-  a.button {
+  .button {
     margin: 16px 0;
   }
 
@@ -316,14 +354,10 @@ main {
   min-height: 110vh;
   position: relative;
   bottom: 15vh;
-  padding: 72px 0 48px;
+  padding: 72px 0;
 
   @include mobile-portrait-up {
     bottom: 30vh;
-  }
-
-  @include mobile-up {
-    padding: 0;
   }
 
 }
@@ -354,7 +388,7 @@ main {
     margin: 8px 0;
   }
 
-  a.button {
+  button {
     margin: 16px 0;
   }
 
@@ -388,6 +422,10 @@ main {
       font-size: 16px;
       line-height: 24px;
       margin-bottom: 24px;
+
+      &:hover {
+        border-color: #666666;
+      }
 
       &:focus {
         outline: none !important;
@@ -429,7 +467,8 @@ main {
     z-index: 9999;
 
     @include mobile-portrait {
-      height: inherit;
+      display: block;
+      overflow: scroll;
     }
 
     &.visible {
@@ -551,8 +590,11 @@ main {
     left: 50%;
     width: 50%;
     background-color: $white;
+    display: flex;
+    justify-content: flex-end;
 
     @include mobile-portrait {
+      top: 0;
       left: 0;
       width: 100%;
       background-color: #f5f5f5;
@@ -563,15 +605,21 @@ main {
       height: 56px;
       padding: 16px 0;
       color: $gray-54;
-
-      &:before {
-        margin-right: 8px;
-      }
+      background-color: transparent;
+      border: none;
+      display: flex;
 
       span {
-        position: relative;
-        bottom: 3px;
+        height: 24px;
+        line-height: 26px;
       }
+
+      i {
+        height: 24px;
+        margin-left: 8px;
+      }
+
+
     }
   }
 }

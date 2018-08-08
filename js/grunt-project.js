@@ -1,7 +1,7 @@
 /**
 A simple Grunt project - 0.1.0
 http://markgoodyear.com
-Copyright (c) 2017 Mark Goodyear
+Copyright (c) 2018 Mark Goodyear
 License: MIT
 */
 // main.js

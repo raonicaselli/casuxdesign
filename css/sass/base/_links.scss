@@ -189,7 +189,7 @@ a {
       }
     }
 
-    &:hover{
+    &:hover {
       background-color: $brand-secondary;
       border-color: $brand-secondary;
     }
@@ -253,6 +253,43 @@ a {
     &:hover {
       color: $brand-primary;
       background-color: $brand-light;
+    }
+  }
+}
+
+button {
+  @include transitions;
+  @include box-border;
+  display: block;
+  text-decoration: none;
+  cursor: pointer;
+
+  &.button {
+    display: inline-block;
+    text-align: center;
+    height: 36px;
+    padding: 6px 16px;
+    background-color: $brand-secondary;
+    border: 1px solid;
+    border-radius: $global-radius;
+    border-color: $brand-secondary;
+    color: $white;
+
+    &.flat {
+      background-color: transparent;
+      color: $brand-secondary;
+      &:hover {
+        color: $white;
+      }
+    }
+
+    &:hover {
+      background-color: rgba($brand-secondary, 0.92);
+      border-color: $brand-secondary;
+    }
+
+    @include mobile-portrait {
+      width: 100%;
     }
   }
 }

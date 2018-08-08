@@ -475,7 +475,7 @@ main {
 }
 @media only screen and (min-width: 768px) {
   .unslider-nav {
-    margin-top: 48px;
+    margin-top: 32px;
   }
 }
 
@@ -498,11 +498,11 @@ main {
     margin: 0 0 8px;
   }
 }
-.slider-container a.button {
+.slider-container .button, .slider-container .link {
   margin: 8px 0;
 }
 @media only screen and (min-width: 1024px) {
-  .slider-container a.button {
+  .slider-container .button, .slider-container .link {
     margin: 16px 0;
   }
 }
@@ -541,6 +541,37 @@ main {
 @media only screen and (min-width: 1024px) {
   .slider-container a.flex-50 {
     margin-right: 32px;
+  }
+}
+.slider-container a.img-wrapper {
+  border: 1px solid #dddddd;
+  border-radius: 4px;
+  margin-bottom: 0;
+  width: 100%;
+  min-height: 30vh;
+  text-align: center;
+}
+.slider-container a.img-wrapper img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 4px;
+}
+@media only screen and (min-width: 1280px) {
+  .slider-container a.img-wrapper img {
+    max-height: 35vh;
+  }
+}
+@media only screen and (min-width: 501px) {
+  .slider-container a.img-wrapper {
+    margin-bottom: 24px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .slider-container a.img-wrapper {
+    margin-bottom: 32px;
   }
 }
 
@@ -630,7 +661,7 @@ main {
 #about p {
   margin: 8px 0;
 }
-#about a.button {
+#about .button {
   margin: 16px 0;
 }
 #about .credential .avatar {
@@ -703,16 +734,11 @@ main {
   min-height: 110vh;
   position: relative;
   bottom: 15vh;
-  padding: 72px 0 48px;
+  padding: 72px 0;
 }
 @media only screen and (min-width: 501px) {
   #process {
     bottom: 30vh;
-  }
-}
-@media only screen and (min-width: 768px) {
-  #process {
-    padding: 0;
   }
 }
 
@@ -743,7 +769,7 @@ main {
 #contact p {
   margin: 8px 0;
 }
-#contact a.button {
+#contact button {
   margin: 16px 0;
 }
 #contact .contact-container {
@@ -775,6 +801,9 @@ main {
   font-size: 16px;
   line-height: 24px;
   margin-bottom: 24px;
+}
+#contact #contact-form input:hover, #contact #contact-form textarea:hover {
+  border-color: #666666;
 }
 #contact #contact-form input:focus, #contact #contact-form textarea:focus {
   outline: none !important;
@@ -812,7 +841,8 @@ main {
 }
 @media only screen and (max-width: 500px) and (orientation: portrait) {
   #project-page .section-wrapper {
-    height: inherit;
+    display: block;
+    overflow: scroll;
   }
 }
 #project-page .section-wrapper.visible {
@@ -920,9 +950,12 @@ main {
   left: 50%;
   width: 50%;
   background-color: #ffffff;
+  display: flex;
+  justify-content: flex-end;
 }
 @media only screen and (max-width: 500px) and (orientation: portrait) {
   #project-page .back-row {
+    top: 0;
     left: 0;
     width: 100%;
     background-color: #f5f5f5;
@@ -935,13 +968,17 @@ main {
   height: 56px;
   padding: 16px 0;
   color: #707070;
-}
-#project-page .back-row .close-button:before {
-  margin-right: 8px;
+  background-color: transparent;
+  border: none;
+  display: flex;
 }
 #project-page .back-row .close-button span {
-  position: relative;
-  bottom: 3px;
+  height: 24px;
+  line-height: 26px;
+}
+#project-page .back-row .close-button i {
+  height: 24px;
+  margin-left: 8px;
 }
 
 /*--------------------------------------*\
@@ -1029,6 +1066,20 @@ main {
   -ms-flex: 0.75;
   /* IE 10 */
   flex: 0.75;
+}
+
+.flex-100 {
+  -webkit-box-flex: 1;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  -moz-box-flex: 1;
+  /* OLD - Firefox 19- */
+  width: 100%;
+  /* For old syntax, otherwise collapses. */
+  -webkit-flex: 1;
+  /* Chrome */
+  -ms-flex: 1;
+  /* IE 10 */
+  flex: 1;
 }
 
 @media only screen and (max-width: 767px) {
@@ -1176,6 +1227,12 @@ p {
 
 a {
   font-family: "Avenir LT Std 85 Heavy", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+button {
+  font-family: "Avenir LT Std 55 Roman", Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 24px;
 }
@@ -1434,6 +1491,46 @@ li a.social-item.last-menu-item {
 li a.social-item:hover {
   color: #00E0F8;
   background-color: rgba(0, 224, 248, 0.12);
+}
+
+button {
+  -webkit-transition: all 300ms ease;
+  -moz-transition: all 300ms ease;
+  -o-transition: all 300ms ease;
+  transition: all 300ms ease;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  display: block;
+  text-decoration: none;
+  cursor: pointer;
+}
+button.button {
+  display: inline-block;
+  text-align: center;
+  height: 36px;
+  padding: 6px 16px;
+  background-color: #00B8CC;
+  border: 1px solid;
+  border-radius: 4px;
+  border-color: #00B8CC;
+  color: #ffffff;
+}
+button.button.flat {
+  background-color: transparent;
+  color: #00B8CC;
+}
+button.button.flat:hover {
+  color: #ffffff;
+}
+button.button:hover {
+  background-color: rgba(0, 184, 204, 0.92);
+  border-color: #00B8CC;
+}
+@media only screen and (max-width: 500px) and (orientation: portrait) {
+  button.button {
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=grunt-project.css.map */

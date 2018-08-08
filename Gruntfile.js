@@ -128,7 +128,7 @@ module.exports = function(grunt) {
       dev: {
         options: {
           style: 'expanded',
-          // sourcemap: true, // Requires Sass 3.3.0 alpha: `sudo gem install sass --pre`
+          //sourcemap: true,
           trace: true,
           debugInfo: false
         },
@@ -249,17 +249,17 @@ module.exports = function(grunt) {
       // JShint, concat + uglify JS on change
       js: {
         files: '<%= jshint.files %>',
-        tasks: ['jshint', 'concat', 'uglify']
+        tasks: ['jshint', 'concat', 'uglify'],
       },
 
       html: {
-        files: '<%= dir.html %>',
-        tasks: ['htmlbuild']
+        files: '<%= dir.html %>/**/*',
+        tasks: ['htmlbuild:dist'],
       },
 
       // Live reload files
-      livereload: {
-        options: { livereload: true },
+      liveReload: {
+        options: { liveReload: true },
         files: [
           '<%= dir.css %>/**/*.css',  // all .css files in css/ dir
           '<%= dir.js %>/**/*.js',    // all .js files in js/ dir
@@ -286,7 +286,7 @@ module.exports = function(grunt) {
 
 
   /**
-   * Production tast, use for deploying
+   * Production task, use for deploying
    * run `grunt production`
    */
   grunt.registerTask('production', [
