@@ -149,25 +149,6 @@ module.exports = function(grunt) {
     },
 
 
-    /**
-     * Minify
-     * @github.com/gruntjs/grunt-contrib-uglify
-     */
-    uglify: {
-
-      // Uglify options
-      options: {
-        banner: '<%= banner %>'
-      },
-
-      // Minify js files in js/src/
-      dist: {
-        src: ['<%= concat.js.dest %>'],
-        dest: '<%= dir.js %>/<%= pkg.name %>.min.js'
-      },
-    },
-
-
     htmlbuild: {
       dist: {
         src: '<%= dir.html %>/index.html',
@@ -249,7 +230,7 @@ module.exports = function(grunt) {
       // JShint, concat + uglify JS on change
       js: {
         files: '<%= jshint.files %>',
-        tasks: ['jshint', 'concat', 'uglify'],
+        tasks: ['jshint', 'concat'],
       },
 
       html: {
@@ -279,7 +260,6 @@ module.exports = function(grunt) {
   grunt.registerTask('default', [
     'jshint',           // JShint
     'concat:js',        // Concatenate main JS files
-    'uglify',           // Minifiy concatenated JS file
     'sass:dev',         // Compile Sass with dev settings
     'htmlbuild',        // Build HTML templates into index.html
   ]);
@@ -292,11 +272,7 @@ module.exports = function(grunt) {
   grunt.registerTask('production', [
     'jshint',           // JShint
     'concat:js',        // Concatenate main JS files
-    'uglify',           // Minifiy concatenated JS file
     'sass:dist',        // Compile Sass with distribution settings
-    'svg2png',          // Convert svg files to png
-    'svgmin',           // Compress svg files
-    'imagemin',         // Compress jpg/jpeg + png files
     'htmlbuild',        // Build HTML templates into index.html
     'minifyHtml',       // Minify HTML
   ]);
@@ -319,7 +295,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-sass');
-  grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-watch');

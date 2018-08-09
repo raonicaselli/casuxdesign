@@ -4,6 +4,36 @@ http://markgoodyear.com
 Copyright (c) 2018 Mark Goodyear
 License: MIT
 */
+const token = "5867d688-4e58-4ab4-bcdb-1396e024d430";
+const $formContact = document.querySelector("#contact-form");
+
+const sendForm = event => {
+  event.preventDefault();
+  const message = {
+    name: document.querySelector("#cname").value,
+    email: document.querySelector("#cemail").value,
+    text: document.querySelector("#cmessage").value
+  };
+  smtpJS(message);
+};
+const smtpJS = message => {
+  try {
+    Email.send(
+      "raonicaselli@gmail.com",
+      "raonicaselli@gmail.com",
+      "Nova mensagem de Cas UX Design",
+      `${message.name}: ${message.email} - ${message.text}`,
+      { token,
+        callback: alert("Obrigado pela mensagem, em breve entratei em contato.")
+      }
+    );
+  } catch (e) {
+    alert("Erro");
+  }
+};
+
+$formContact.addEventListener("submit", sendForm);
+
 // main.js
 
 jQuery(document).ready(function($){
@@ -68,15 +98,20 @@ jQuery(document).ready(function($){
     $(this).prev(["label"]).removeClass("active");
   });
 
-
   // Open portfolio projects
-  $("#open-dolphin").click(function(e){
-    e.preventDefault();
-    $("#project-page").load("html/projects/dolphin.html", function(){
-      $(".section-wrapper").addClass("visible");
-    });
-    $("html").addClass("noscroll");
-  });
+
+  // function openProject(param1, param2){
+  //   $(param1).click(function(e){
+  //     e.preventDefault();
+  //     $("#project-page").load("html/projects/" + param2 + ".html", function(){
+  //       $(".section-wrapper").addClass("visible");
+  //       $(".behance-container").addClass("visible");
+  //     });
+  //     $("html").addClass("noscroll");
+  //   });
+  // }
+  //
+  // openProject("#open-dolphin", "dolphin");
 
 
 

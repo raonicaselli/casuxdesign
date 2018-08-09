@@ -111,7 +111,6 @@ main {
   }
 
   & a.flex-50 {
-    border: 1px solid #dddddd;
     border-radius: $global-radius;
     margin-right: 0;
 
@@ -121,6 +120,7 @@ main {
       max-height: 224px;
       object-fit: cover;
       border-radius: $global-radius;
+      border: 1px solid #dddddd;
 
       @include mobile-landscape {
         max-height: 160px;
@@ -150,27 +150,16 @@ main {
     margin-bottom: 0;
     width: 100%;
     min-height: 30vh;
+    max-height: 35vh;
     text-align: center;
 
     img {
       width: auto;
       height: auto;
       max-width: 100%;
-      max-height: 100%;
+      max-height: 35vh;
       object-fit: contain;
       border-radius: $global-radius;
-
-      //@include mobile-landscape {
-      //  max-height: 120px;
-      //}
-      //
-      //@include mobile-up {
-      //  max-height: 240px;
-      //}
-
-      @include desktop {
-        max-height: 35vh;
-      }
     }
 
     @include mobile-portrait-up {
@@ -420,8 +409,9 @@ main {
       width: 100%;
       text-indent: 12px;
       font-size: 16px;
-      line-height: 24px;
+      line-height: 36px;
       margin-bottom: 24px;
+      padding: 0;
 
       &:hover {
         border-color: #666666;
@@ -430,13 +420,19 @@ main {
       &:focus {
         outline: none !important;
         border: 2px solid $brand-secondary;
+        text-indent: 11px;
       }
     }
 
     textarea {
       @extend input;
+      line-height: 24px;
       height: 72px;
       padding: 6px 0;
+
+      &:focus {
+        padding-top: 5px;
+      }
     }
 
     ::-webkit-input-placeholder { /* Chrome/Opera/Safari */

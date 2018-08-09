@@ -162,6 +162,7 @@ a {
   cursor: pointer;
 
   &.link {
+    @include heavy;
     color: $brand-secondary;
     display: inline-block;
 
@@ -171,6 +172,7 @@ a {
   }
 
   &.button {
+    @include regular;
     display: inline-block;
     text-align: center;
     height: 36px;

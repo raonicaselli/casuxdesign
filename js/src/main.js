@@ -62,15 +62,20 @@ jQuery(document).ready(function($){
     $(this).prev(["label"]).removeClass("active");
   });
 
-
   // Open portfolio projects
-  $("#open-dolphin").click(function(e){
-    e.preventDefault();
-    $("#project-page").load("html/projects/dolphin.html", function(){
-      $(".section-wrapper").addClass("visible");
-    });
-    $("html").addClass("noscroll");
-  });
+
+  // function openProject(param1, param2){
+  //   $(param1).click(function(e){
+  //     e.preventDefault();
+  //     $("#project-page").load("html/projects/" + param2 + ".html", function(){
+  //       $(".section-wrapper").addClass("visible");
+  //       $(".behance-container").addClass("visible");
+  //     });
+  //     $("html").addClass("noscroll");
+  //   });
+  // }
+  //
+  // openProject("#open-dolphin", "dolphin");
 
 
 
